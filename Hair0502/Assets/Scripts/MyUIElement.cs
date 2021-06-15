@@ -5,26 +5,27 @@ using Valve.VR.InteractionSystem;
 
 public class MyUIElement : UIElement
 {
+    public Hand currentHand;
     protected override void Awake()
     {
         base.Awake();
     }
 
-    protected override void OnHandHoverBegin(Hand hand)
+    protected override void OnHandHoverBegin(Hand currentHand)
     {
-        base.OnHandHoverBegin(hand);
+        base.OnHandHoverBegin(currentHand);
         Debug.Log("Hover Begin");
     }
 
-    protected override void OnHandHoverEnd(Hand hand)
+    protected override void OnHandHoverEnd(Hand currentHand)
     {
-        base.OnHandHoverEnd(hand);
+        base.OnHandHoverEnd(currentHand);
         Debug.Log("Hover End");
     }
 
-    protected override void HandHoverUpdate(Hand hand)
+    protected override void HandHoverUpdate(Hand currentHand)
     {
-        base.HandHoverUpdate(hand);
+        base.HandHoverUpdate(currentHand);
         Debug.Log("Hovering");
     }
 
